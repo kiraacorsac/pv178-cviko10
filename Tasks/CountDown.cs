@@ -57,6 +57,13 @@ namespace Threads
         public void Start()
         {
             Enabled = true;
+            Task.Run(() => {
+                while (Enabled)
+                {
+                    Thread.Sleep(SecondsPerTick * 1000);
+                    Tick();
+                }
+            });
         }
 
         /// <summary>

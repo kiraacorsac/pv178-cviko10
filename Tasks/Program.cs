@@ -27,13 +27,16 @@ namespace Tasks
             var task = new Task(() => Console.WriteLine(message + Task.CurrentId));
             task.Start();
 
+            //TODO: Task<int> here
             // Easy way to start a new task
             const int factorial = 3;
             var startedTask = Task.Run(() => Factorial.ComputeSmallFactorial(factorial));
             // Can be ommited because we are accesing result on the next line
             startedTask.Wait();
+            //TODO: Tasks have results
             var factorialOfThree = startedTask.Result;
 
+            //TODO: vysvetlit cancallation token
             // This usage can potentially lead to undesired side effects
             var startedTaskViaFactoryBad = Task.Factory.StartNew(() => Factorial.ComputeSmallFactorial(3));
 
@@ -49,7 +52,7 @@ namespace Tasks
             Console.WriteLine("Press any key to start countdown." + Environment.NewLine);
             Console.ReadKey();
             new Countdown(5, 1, () => Console.WriteLine("End"), () => Console.WriteLine("Tick"))
-                .StartWithTask();
+                .Start();
             
             Console.ReadKey();
         }    
