@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/AsynchronousPrograming/bin/Debug
+/AsynchronousPrograming/obj/Debug
+/AsyncWFDemo/bin/Debug
+/AsyncWFDemo/obj/Debug
+/packages/Newtonsoft.Json.9.0.1
+/Tasks/bin/Debug
+/Tasks/obj/Debug
+*.user
+*.suo
